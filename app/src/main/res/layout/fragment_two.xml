@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="30dp"
     android:gravity="center"
     tools:context=".fragment.TwoFragment">
 
@@ -12,18 +13,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@mipmap/ic_launcher"
-
+        android:layout_margin="10dp"
         />
 
     <EditText
         android:layout_marginTop="5sp"
         android:id="@+id/nomi_tv"
+        android:layout_margin="10dp"
         android:hint="Nomi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <EditText
         android:id="@+id/narxi_tv"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Narxi"
@@ -32,17 +35,20 @@
     <EditText
         android:id="@+id/soni_tv"
         android:hint="Soni"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Spinner
         android:padding="16dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/Save_btn"
         android:text="Save"
+        android:layout_margin="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

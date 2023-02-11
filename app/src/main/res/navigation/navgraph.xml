@@ -9,7 +9,11 @@
         android:id="@+id/allFragment"
         android:name="com.example.myproductall.fragment.AllFragment"
         android:label="fragment_all"
-        tools:layout="@layout/fragment_all" />
+        tools:layout="@layout/fragment_all" >
+        <action
+            android:id="@+id/action_allFragment_to_allProductFragment"
+            app:destination="@id/allProductFragment" />
+    </fragment>
     <fragment
         android:id="@+id/firstFragment"
         android:name="com.example.myproductall.fragment.FirstFragment"
@@ -35,4 +39,9 @@
         android:name="com.example.myproductall.fragment.TypeFragment"
         android:label="fragment_type"
         tools:layout="@layout/fragment_type" />
+    <fragment
+        android:id="@+id/allProductFragment"
+        android:name="com.example.myproductall.fragment.AllProductFragment"
+        android:label="fragment_all_product"
+        tools:layout="@layout/fragment_all_product" />
 </navigation>
