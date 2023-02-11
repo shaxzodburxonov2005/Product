@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/allFragment">
+
+    <fragment
+        android:id="@+id/allFragment"
+        android:name="com.example.myproductall.fragment.AllFragment"
+        android:label="fragment_all"
+        tools:layout="@layout/fragment_all" />
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.myproductall.fragment.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_typeFragment"
+            app:destination="@id/typeFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_twoFragment"
+            app:destination="@id/twoFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_allFragment"
+            app:destination="@id/allFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/twoFragment"
+        android:name="com.example.myproductall.fragment.TwoFragment"
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_two" />
+    <fragment
+        android:id="@+id/typeFragment"
+        android:name="com.example.myproductall.fragment.TypeFragment"
+        android:label="fragment_type"
+        tools:layout="@layout/fragment_type" />
+</navigation>
