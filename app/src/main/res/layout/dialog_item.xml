@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginRight="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/img_tv"
+            android:background="@mipmap/ic_launcher"
+            app:layout_constraintRight_toLeftOf="@+id/img2"
+            />
+        <TextView
+            android:layout_marginTop="10sp"
+            android:id="@+id/img_tv"
+            app:layout_constraintTop_toBottomOf="@+id/img"
+            app:layout_constraintLeft_toLeftOf="@+id/img"
+            app:layout_constraintRight_toRightOf="@+id/img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Suratga olish"
+            />
+
+
+
+        <ImageView
+            app:layout_constraintLeft_toRightOf="@+id/img"
+            android:id="@+id/img2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_launcher"
+            app:layout_constraintBottom_toTopOf="@+id/img_tv2"
+            />
+        <TextView
+            android:layout_marginTop="10sp"
+            android:id="@+id/img_tv2"
+            app:layout_constraintTop_toBottomOf="@+id/img2"
+            app:layout_constraintLeft_toLeftOf="@+id/img2"
+            app:layout_constraintRight_toRightOf="@+id/img2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+
+            android:textStyle="bold"
+            android:text="Gallaeryadan yuklash"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

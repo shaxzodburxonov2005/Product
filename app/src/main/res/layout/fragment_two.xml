@@ -12,8 +12,9 @@
         android:id="@+id/img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@mipmap/ic_launcher"
+
         android:layout_margin="10dp"
+        android:visibility="gone"
         />
 
     <EditText
@@ -49,6 +50,12 @@
         android:id="@+id/Save_btn"
         android:text="Save"
         android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+
+        android:text="img"
+        android:id="@+id/btn_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

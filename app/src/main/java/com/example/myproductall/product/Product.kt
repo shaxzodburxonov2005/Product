@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class Product(
     var name: String? = null,
-    var price: String? = null,
+    var price: Int? = null,
     var tayp: String? = null,
     var img: ImageView? = null,
     var number: String? = null,

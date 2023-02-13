@@ -3,17 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navgraph"
-    app:startDestination="@id/allFragment">
-
-    <fragment
-        android:id="@+id/allFragment"
-        android:name="com.example.myproductall.fragment.AllFragment"
-        android:label="fragment_all"
-        tools:layout="@layout/fragment_all" >
-        <action
-            android:id="@+id/action_allFragment_to_allProductFragment"
-            app:destination="@id/allProductFragment" />
-    </fragment>
+    app:startDestination="@id/firstFragment">
     <fragment
         android:id="@+id/firstFragment"
         android:name="com.example.myproductall.fragment.FirstFragment"
@@ -33,7 +23,11 @@
         android:id="@+id/twoFragment"
         android:name="com.example.myproductall.fragment.TwoFragment"
         android:label="fragment_two"
-        tools:layout="@layout/fragment_two" />
+        tools:layout="@layout/fragment_two" >
+        <action
+            android:id="@+id/action_twoFragment_to_camerFragment"
+            app:destination="@id/camerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/typeFragment"
         android:name="com.example.myproductall.fragment.TypeFragment"
@@ -44,4 +38,19 @@
         android:name="com.example.myproductall.fragment.AllProductFragment"
         android:label="fragment_all_product"
         tools:layout="@layout/fragment_all_product" />
+    <fragment
+        android:id="@+id/allFragment"
+        android:name="com.example.myproductall.fragment.AllFragment"
+        android:label="fragment_all"
+        tools:layout="@layout/fragment_all" >
+        <action
+            android:id="@+id/action_allFragment_to_allProductFragment"
+            app:destination="@id/allProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/camerFragment"
+        android:name="com.example.myproductall.CamerFragment"
+        android:label="fragment_camer"
+        tools:layout="@layout/fragment_camer" />
+
 </navigation>
