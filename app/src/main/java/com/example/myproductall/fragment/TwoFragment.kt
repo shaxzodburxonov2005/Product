@@ -26,7 +26,7 @@ import java.io.FileOutputStream
 
 class TwoFragment : Fragment() {
     lateinit var binding: FragmentTwoBinding
-    lateinit var dataBase: DataBase
+//    lateinit var dataBase: DataBase
     var imgUri:String?=null
     private val galleryPermission=registerForActivityResult(ActivityResultContracts.RequestPermission()){ granted->
         if (granted){
@@ -51,18 +51,18 @@ class TwoFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_two, container, false)
         binding = FragmentTwoBinding.bind(view)
 
-        dataBase = DataBase.getInstance(requireContext())
-        val product: ProductDao = dataBase.userDao()
+//        dataBase = DataBase.getInstance(requireContext())
+      //  val product: ProductDao = dataBase.userDao()
 
 
         binding.SaveBtn.setOnClickListener {
             val name = binding.nomiTv.text.toString()
             val soni = binding.soniTv.text.toString()
             val narxi = binding.narxiTv.text.toString().toInt()
-            val rast = binding.img
 
 
-            product.addProduct(product = Product(name,narxi, tayp = null,rast,soni))
+
+//            product.addProduct(product = Product(name,narxi, tayp = null,rast,soni))
 
         }
         binding.btnImg.setOnClickListener {
@@ -75,6 +75,7 @@ class TwoFragment : Fragment() {
 
             bind.img2.setOnClickListener {
                 galleryPermission.launch(android.Manifest.permission.READ_EXTERNAL_STORAGE)
+                customDialog.dismiss()
             }
             bind.img.setOnClickListener {
                 if (allPermissonGranted()){
@@ -84,9 +85,13 @@ class TwoFragment : Fragment() {
                         requireActivity(), REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS
                     )
                 }
+                customDialog.dismiss()
             }
+
             customDialog.show()
+
         }
+
         findNavController().currentBackStackEntry?.savedStateHandle?.getLiveData<String>("key")
             ?.observe(
                 viewLifecycleOwner
