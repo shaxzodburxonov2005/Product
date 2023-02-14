@@ -14,15 +14,18 @@ interface ProductDao {
     @Query("SELECT * FROM Taype")
     fun getAllTypes(): List<Tayp>
 
-    @Query("SELECT id FROM product WHERE name =:uName")
-    fun getProductById(uName: String): Int
-
     @Insert
     fun addProduct(product: Product)
+    @Insert
+    fun addTyap(product: Product)
 
     @Update
     fun editProduct(product: Product)
+    @Update
+    fun editTyap(product: Product)
 
     @Delete
     fun deleteProduct(product: Product)
+    @Delete
+    fun deletTyap(product: Product)
 }

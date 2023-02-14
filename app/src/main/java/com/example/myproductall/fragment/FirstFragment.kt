@@ -28,9 +28,6 @@ class FirstFragment : Fragment() {
             findNavController().navigate(R.id.typeFragment)
         }
 
-
-
-
         return view
     }
 }

@@ -9,7 +9,7 @@ data class Product(
     var name: String? = null,
     var price: Int? = null,
     var tayp: String? = null,
-    var img: String? = null,
+    var img: ImageView? = null,
     var number: String? = null,
 
     @PrimaryKey(autoGenerate = true)
